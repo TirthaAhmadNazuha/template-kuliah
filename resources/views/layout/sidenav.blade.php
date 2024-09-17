@@ -1,13 +1,14 @@
 @php
   $routes = [
     ['/', 'Beranda'],
-    ['/test-items', 'Test Item']
+    ['/test-items', 'Test Item'],
+    ['/customer', 'Customer Kamu'],
   ]
 @endphp
 
 <aside
   class="bg-slate-800 rounded-r-[16px] text-white flex flex-col font-medium px-6 py-4 min-w-[240px] max-w-full text-lg h-full">
-  <h1 class="font-semibold text-[28px] pb-3 border-b-slate-400 my-6 border-b-2">Logo</h1>
+  <h1 class="font-semibold text-[28px] pb-3 border-b-slate-400 my-6 border-b-2">LOUNDRY-IN</h1>
   <div class="flex flex-col gap-3 flex-grow">
     @foreach ($routes as $route)
     <a class="hover:bg-slate-700 px-3 py-2 rounded-md" href="{{$route[0]}}">{{$route[1]}}</a>
