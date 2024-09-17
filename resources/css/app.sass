@@ -1,0 +1,42 @@
+@tailwind base
+@tailwind components
+@tailwind utilities
+
+.table-container
+  @apply border-2 rounded-xl border-slate-400 overflow-hidden w-full
+
+  table
+    @apply table-auto border-collapse w-full
+
+table .row-aksi
+  @apply flex flex-nowrap gap-3 items-center justify-center max-w-full
+
+.btn-danger
+  @apply px-3 py-2 bg-red-200 rounded font-medium text-red-700 min-w-20 inline-flex items-center justify-center
+
+.btn-info
+  @apply px-3 py-2 bg-blue-200 rounded font-medium text-blue-700 min-w-20 inline-flex items-center justify-center
+
+.btn-success
+  @apply px-3 py-2 bg-green-200 rounded font-medium text-green-700 min-w-20 inline-flex items-center justify-center
+
+.btn-outline
+  @apply px-3 py-2 rounded font-medium text-black min-w-20 inline-flex items-center justify-center
+
+.btn-primary
+  @apply px-3 py-2 bg-indigo-600 rounded font-medium text-white min-w-20 inline-flex items-center justify-center
+
+table thead
+  @apply bg-slate-200 capitalize font-medium
+
+table td, table th
+  @apply border border-slate-300 p-3
+
+form
+  @apply w-full flex flex-col gap-4
+
+  textarea
+    height: 110px
+
+  input, textarea, select
+    @apply w-full bg-gray-100 font-medium border border-slate-300 outline-slate-700 rounded-md px-4 py-3 placeholder:text-slate-400 placeholder:font-semibold
