@@ -17,9 +17,9 @@ class AuthController extends Controller
     {
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('dashboard');
+            return redirect('/')->withErrors(['msg' => 'Login berhasil']);
         }
-        return redirect('login')->withErrors(['email' => 'Invalid credentials.']);
+        return redirect('login')->withErrors(['error' => 'Invalid credentials.']);
     }
 
     public function logout()
@@ -47,6 +47,6 @@ class AuthController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        return redirect('login');
+        return redirect('login')->withErrors(['msg' => 'Daftar berhasil, Silahkan login']);
     }
 }

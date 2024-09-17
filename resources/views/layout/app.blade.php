@@ -20,6 +20,16 @@
       </main>
     </div>
   </div>
+  <div class="absolute bottom-4 right-4">
+    @if ($errors->any())
+    @foreach ($errors->all() as $error)
+    <div onclick="event.target.remove()" class="bg-gray-50 text-black rounded-md border-gray-200 shadow-md p-3">
+      {{ $error }}
+    </div>
+  @endforeach
+  @endif
+
+  </div>
   @vite('resources/js/app.js')
 </body>
 
